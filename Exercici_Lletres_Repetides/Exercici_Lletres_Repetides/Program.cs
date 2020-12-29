@@ -10,9 +10,9 @@ namespace Exercici_Lletres_Repetides
         static void Main(string[] args)
         {
             //Milestone1();
-            //Milestone2Numeros();
+            Milestone2Numeros();
             //Milestone2Asterisc();
-            Milestone3();
+            //Milestone3();
         }
 
         static void Milestone1()
@@ -91,9 +91,9 @@ namespace Exercici_Lletres_Repetides
 
         static void Milestone2Asterisc()
         {
-            Console.WriteLine("Piramide de Astericos, introdueix un número: ");
+            Console.WriteLine("Piramide de Astericos, introdueix un número de pisos: ");
             int numeroAsteriscos = Convert.ToInt32(Console.ReadLine());
-            string[] piramide = new string[numeroAsteriscos];
+            string[] piramide = new string[numeroAsteriscos*2+1];// el creem del doble per aconseguir les files introduides
 
             for (int x = 0; x < piramide.Length; x++) //afegim * a cada posicio del array
             {
