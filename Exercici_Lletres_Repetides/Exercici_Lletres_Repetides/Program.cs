@@ -9,8 +9,8 @@ namespace Exercici_Lletres_Repetides
     {
         static void Main(string[] args)
         {
-            //Milestone1();
-            Milestone2Numeros();
+            Milestone1();
+            //Milestone2Numeros();
             //Milestone2Asterisc();
             //Milestone3();
         }
@@ -55,8 +55,22 @@ namespace Exercici_Lletres_Repetides
             }
 
             //fase 3
+            Dictionary<char, int> mapaLletres = new Dictionary<char, int>(); // creamos el diccionario
 
+            for (int x = 0; x < llistaNom.Count; x++) //recorremos toda la lista
+            {
+                if (mapaLletres.TryGetValue(llistaNom[x], out int y)) // intentamos traer valor del diccionario = a posicion actual de lista, da boolean. si true
+                {
+                    mapaLletres[llistaNom[x]] = mapaLletres[llistaNom[x]] + 1; //buscamos contenido actual de la posicion de la lista, añadimos valor actual + 1 a la clave valor de ese contenido.
+                }
+                else
+                {
+                    mapaLletres.Add(llistaNom[x], 1); // si no esta, añadimos la key con valor 1
+                }
 
+            }
+
+            Console.WriteLine(string.Join("", mapaLletres));
 
             //fase 4
 
